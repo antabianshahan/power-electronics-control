@@ -17,7 +17,7 @@ These are the same building blocks I now use in my MSc thesis on the digital con
 
 **Plant.** The state-space averaged model, derived in [docs/flyback_state_space_modelling.pdf](docs/flyback_state_space_modelling.pdf), gives
 
-$$G_{vd}(s)=\frac{\dfrac{V_g}{n}\left(1-\dfrac{L_m D n^2}{R(1-D)^2}\,s\right)}{L_m C\,s^2+\dfrac{L_m}{R}\,s+\dfrac{(1-D)^2}{n^2}}$$
+$$G_{vd}(s)=\frac{\dfrac{V_g}{n}\left(1-\dfrac{L_m D n^2}{R(1-D)^2}\ s\right)}{L_m C\ s^2+\dfrac{L_m}{R}\ s+\dfrac{(1-D)^2}{n^2}}$$
 
 with D = 0.5, a resonance at **2.9 kHz (Q ≈ 11)** and a **right-half-plane zero at 63.7 kHz**.
 
@@ -25,7 +25,7 @@ with D = 0.5, a resonance at **2.9 kHz (Q ≈ 11)** and a **right-half-plane zer
 
 **Design.** The compensator is
 
-$$G_c(s)=\frac{G_{c0}}{s}\,\frac{(1+s/\omega_z)^2}{(1+s/\omega_p)^2}$$
+$$G_c(s)=\frac{G_{c0}}{s}\ \frac{(1+s/\omega_z)^2}{(1+s/\omega_p)^2}$$
 
 The double zero and double pole are placed geometrically around f<sub>c</sub> (ω<sub>z</sub> = ω<sub>c</sub>/a, ω<sub>p</sub> = a·ω<sub>c</sub>, a ≈ 9.8). This gives **f<sub>z</sub> ≈ 2.04 kHz, f<sub>p</sub> ≈ 196 kHz** and **G<sub>c0</sub> ≈ 1209**, which sets |T(j2π·20 kHz)| = 1.
 
